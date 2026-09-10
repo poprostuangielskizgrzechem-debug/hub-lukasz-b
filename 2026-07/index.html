@@ -2681,7 +2681,28 @@ video {
                         "correction": "",
                         "items": [],
                         "explanation": "Past Simple opisuje zamkniętą przeszłość z konkretnym czasem. 'so much' idzie z rzeczownikami niepoliczalnymi, 'so many' z policzalnymi w liczbie mnogiej ('so many people').",
-                        "links": []
+                        "links": [
+                                {
+                                        "label": "Wszystko o Past Simple | ROCK YOUR ENGLISH #207",
+                                        "url": "https://www.youtube.com/watch?v=wAv4Lsnlb_M&t=67s",
+                                        "type": "youtube"
+                                },
+                                {
+                                        "label": "Past simple: Regular/irregular verbs - Test-English",
+                                        "url": "https://test-english.com/grammar-points/a1/past-simple-regular-irregular/",
+                                        "type": "test"
+                                },
+                                {
+                                        "label": "Past simple: Form and use - Test-English",
+                                        "url": "https://test-english.com/grammar-points/a2/past-simple-form-use/",
+                                        "type": "test"
+                                },
+                                {
+                                        "label": "Past simple: Negatives and questions - Test-English",
+                                        "url": "https://test-english.com/grammar-points/a1/past-simple-negatives-questions/",
+                                        "type": "test"
+                                }
+                        ]
                 },
                 {
                         "lessonLabel": "Lekcja 2",
@@ -2712,37 +2733,9 @@ video {
                         "label": "Czasowniki - ćwiczenia online z angielskiego",
                         "url": "https://www.ang.pl/cwiczenia/czasowniki",
                         "type": "other"
-                },
-                {
-                        "lessonLabel": "Lekcja 1",
-                        "dateLabel": "21.07.2026",
-                        "label": "Past simple: Regular/irregular verbs - Test-English",
-                        "url": "https://test-english.com/grammar-points/a1/past-simple-regular-irregular/",
-                        "type": "test"
-                },
-                {
-                        "lessonLabel": "Lekcja 1",
-                        "dateLabel": "21.07.2026",
-                        "label": "Past simple: Form and use - Test-English",
-                        "url": "https://test-english.com/grammar-points/a2/past-simple-form-use/",
-                        "type": "test"
-                },
-                {
-                        "lessonLabel": "Lekcja 1",
-                        "dateLabel": "21.07.2026",
-                        "label": "Past simple: Negatives and questions - Test-English",
-                        "url": "https://test-english.com/grammar-points/a1/past-simple-negatives-questions/",
-                        "type": "test"
                 }
         ],
         "media": [
-                {
-                        "lessonLabel": "Lekcja 1",
-                        "dateLabel": "21.07.2026",
-                        "label": "Wszystko o Past Simple | ROCK YOUR ENGLISH #207",
-                        "url": "https://www.youtube.com/watch?v=wAv4Lsnlb_M&t=67s",
-                        "type": "youtube"
-                },
                 {
                         "lessonLabel": "Lekcja 2",
                         "dateLabel": "29.07.2026",
@@ -4347,7 +4340,7 @@ video {
                             }).join('') + '</ul>';
                         }
                         return '<div class="hub-gram">' +
-                            '<p class="hub-gram-topic">' + escapeHtml(g.topic || '') + '</p>' +
+                            (g.topic ? '<p class="hub-gram-topic">' + escapeHtml(g.topic) + '</p>' : '') +
                             '<p class="hub-gram-lesson">' + escapeHtml(g.lessonLabel || '') +
                             (g.dateLabel ? ' &middot; ' + escapeHtml(g.dateLabel) : '') + '</p>' +
                             pair + items +
