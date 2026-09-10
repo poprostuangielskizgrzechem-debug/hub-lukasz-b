@@ -2663,7 +2663,13 @@ video {
                         "correction": "",
                         "items": [],
                         "explanation": "Angielskie zdanie zawsze trzyma kolejność podmiot-orzeczenie-dopełnienie, a po czasownikach modalnych (must, can) czasownik główny zostaje w formie podstawowej bez -ing.",
-                        "links": []
+                        "links": [
+                                {
+                                        "label": "Jak tworzyć poprawne zdania po angielsku | ROCK YOUR ENGLISH # 1",
+                                        "url": "https://www.youtube.com/watch?v=d8UxEkQWcoo",
+                                        "type": "youtube"
+                                }
+                        ]
                 },
                 {
                         "lessonLabel": "Lekcja 2",
@@ -2699,13 +2705,6 @@ video {
                         "label": "How to Apologize at Work — And Why It Matters | Engoo Daily News",
                         "url": "https://engoo.com/app/daily-news/article/how-to-apologize-at-work-and-why-it-matters/eDRsXGL9EfG4AnsRvdWHmQ",
                         "type": "article"
-                },
-                {
-                        "lessonLabel": "Lekcja 1",
-                        "dateLabel": "23.06.2026",
-                        "label": "Jak tworzyć poprawne zdania po angielsku | ROCK YOUR ENGLISH # 1",
-                        "url": "https://www.youtube.com/watch?v=d8UxEkQWcoo",
-                        "type": "youtube"
                 },
                 {
                         "lessonLabel": "Lekcja 1",
@@ -4282,7 +4281,7 @@ video {
                             }).join('') + '</ul>';
                         }
                         return '<div class="hub-gram">' +
-                            '<p class="hub-gram-topic">' + escapeHtml(g.topic || '') + '</p>' +
+                            (g.topic ? '<p class="hub-gram-topic">' + escapeHtml(g.topic) + '</p>' : '') +
                             '<p class="hub-gram-lesson">' + escapeHtml(g.lessonLabel || '') +
                             (g.dateLabel ? ' &middot; ' + escapeHtml(g.dateLabel) : '') + '</p>' +
                             pair + items +
