@@ -2694,19 +2694,17 @@ video {
                         "correction": "",
                         "items": [],
                         "explanation": "'information' jest niepoliczalne, więc mówimy 'so much information', a nie 'so many information'. Czasowniki nieregularne z tej lekcji przećwiczysz w osobnym module Czasowniki.",
-                        "links": []
+                        "links": [
+                                {
+                                        "label": "WSZYSTKIE czasy. Tak, znowu. Ale trochę inaczej | ROCK YOUR ENGLISH #214",
+                                        "url": "https://www.youtube.com/watch?v=W7nJSuifQck&t=1351s",
+                                        "type": "youtube"
+                                }
+                        ]
                 }
         ],
         "homework": [],
-        "media": [
-                {
-                        "lessonLabel": "Lekcja 1",
-                        "dateLabel": "4.09.2026",
-                        "label": "WSZYSTKIE czasy. Tak, znowu. Ale trochę inaczej | ROCK YOUR ENGLISH #214",
-                        "url": "https://www.youtube.com/watch?v=W7nJSuifQck&t=1351s",
-                        "type": "youtube"
-                }
-        ],
+        "media": [],
         "pronunciation": [
                 {
                         "lessonLabel": "Lekcja 1",
@@ -4329,7 +4327,7 @@ video {
                             }).join('') + '</ul>';
                         }
                         return '<div class="hub-gram">' +
-                            '<p class="hub-gram-topic">' + escapeHtml(g.topic || '') + '</p>' +
+                            (g.topic ? '<p class="hub-gram-topic">' + escapeHtml(g.topic) + '</p>' : '') +
                             '<p class="hub-gram-lesson">' + escapeHtml(g.lessonLabel || '') +
                             (g.dateLabel ? ' &middot; ' + escapeHtml(g.dateLabel) : '') + '</p>' +
                             pair + items +
