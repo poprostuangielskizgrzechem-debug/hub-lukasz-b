@@ -2691,7 +2691,18 @@ video {
                         "correction": "",
                         "items": [],
                         "explanation": "'must' opisuje obowiązek w teraźniejszości, przeszłość wyraża 'had to'. Czasowniki nieregularne z tej lekcji przećwiczysz w osobnym module Czasowniki.",
-                        "links": []
+                        "links": [
+                                {
+                                        "label": "WILL czy GOING TO? | ROCK YOUR ENGLISH #174",
+                                        "url": "https://youtu.be/p4uDnz_bS3s?si=r4e7UawkRS6g1B9v",
+                                        "type": "youtube"
+                                },
+                                {
+                                        "label": "Future forms: Will, be going to, present continuous - Test-English",
+                                        "url": "https://test-english.com/grammar-points/b1/future-forms/",
+                                        "type": "test"
+                                }
+                        ]
                 },
                 {
                         "lessonLabel": "Lekcja 2",
@@ -2715,24 +2726,8 @@ video {
                         ]
                 }
         ],
-        "homework": [
-                {
-                        "lessonLabel": "Lekcja 1",
-                        "dateLabel": "17.08.2026",
-                        "label": "Future forms: Will, be going to, present continuous - Test-English",
-                        "url": "https://test-english.com/grammar-points/b1/future-forms/",
-                        "type": "test"
-                }
-        ],
-        "media": [
-                {
-                        "lessonLabel": "Lekcja 1",
-                        "dateLabel": "17.08.2026",
-                        "label": "WILL czy GOING TO? | ROCK YOUR ENGLISH #174",
-                        "url": "https://youtu.be/p4uDnz_bS3s?si=r4e7UawkRS6g1B9v",
-                        "type": "youtube"
-                }
-        ],
+        "homework": [],
+        "media": [],
         "pronunciation": [
                 {
                         "lessonLabel": "Lekcja 2",
@@ -4362,7 +4357,7 @@ video {
                             }).join('') + '</ul>';
                         }
                         return '<div class="hub-gram">' +
-                            '<p class="hub-gram-topic">' + escapeHtml(g.topic || '') + '</p>' +
+                            (g.topic ? '<p class="hub-gram-topic">' + escapeHtml(g.topic) + '</p>' : '') +
                             '<p class="hub-gram-lesson">' + escapeHtml(g.lessonLabel || '') +
                             (g.dateLabel ? ' &middot; ' + escapeHtml(g.dateLabel) : '') + '</p>' +
                             pair + items +
