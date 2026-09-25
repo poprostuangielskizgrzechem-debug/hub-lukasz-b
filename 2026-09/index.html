@@ -2001,6 +2001,43 @@ video {
       .hub-gram-items li { background:var(--hub-paper); border-radius:8px; padding:7px 11px;
                            font-size:14.5px; color:var(--hub-ink); }
 
+      /* --- notatka graficzna (g.sections) --- */
+      .hub-gsections { display:flex; flex-direction:column; gap:12px; margin-top:14px; }
+      .hub-gcard { --t:var(--hub-blue); --tb:var(--hub-tint); border:1px solid var(--hub-line); border-left:5px solid var(--t);
+                   border-radius:12px; padding:14px 16px; background:#fff; }
+      .tone-red   { --t:var(--hub-accent); --tb:#fdecee; }
+      .tone-green { --t:#1f8a4c; --tb:#e8f5ee; }
+      .tone-gold  { --t:#b7791f; --tb:#fdf6e3; }
+      .hub-gcard-title { font-family:'Plus Jakarta Sans', Arial, sans-serif; font-size:16px; font-weight:800;
+                         color:var(--t); margin:0 0 8px; display:flex; gap:8px; align-items:baseline; }
+      .hub-gcard-emoji { font-size:19px; line-height:1; }
+      .hub-gcard-points { margin:0; padding-left:20px; font-size:15px; line-height:1.6; color:var(--hub-ink); }
+      .hub-gcard-points li + li { margin-top:4px; }
+      .hub-gcard-ex { background:var(--tb); border-radius:10px; padding:10px 13px; margin-top:10px; }
+      .hub-gcard-ex-label { font-family:'Plus Jakarta Sans', Arial, sans-serif; font-size:10.5px; font-weight:700;
+                            text-transform:uppercase; letter-spacing:.8px; color:var(--t); margin:0 0 4px; }
+      .hub-gcard-ex-line { font-size:15px; line-height:1.55; color:var(--hub-ink); margin:0; }
+      .hub-gcard-ex-line + .hub-gcard-ex-line { margin-top:5px; }
+      .hub-hl { color:var(--t); font-weight:800; }
+      .hub-gtable-wrap { overflow-x:auto; }
+      .hub-gtable { width:100%; border-collapse:collapse; font-size:14.5px; line-height:1.5; }
+      .hub-gtable th { font-family:'Plus Jakarta Sans', Arial, sans-serif; font-weight:800; text-align:left;
+                       background:var(--tb); color:var(--hub-ink); padding:8px 10px; }
+      .hub-gtable td { padding:8px 10px; border-top:1px solid var(--hub-line); vertical-align:top; color:var(--hub-ink); }
+      .hub-gtable td + td, .hub-gtable th + th { border-left:1px solid var(--hub-line); }
+      .hub-gtip { --t:var(--hub-blue); --tb:var(--hub-tint); display:flex; gap:12px; align-items:flex-start;
+                  background:var(--tb); border-radius:12px; padding:13px 16px; }
+      .hub-gtip-emoji { font-size:22px; line-height:1.2; flex-shrink:0; }
+      .hub-gtip-title { font-family:'Plus Jakarta Sans', Arial, sans-serif; font-size:15px; font-weight:800; color:var(--t); margin:0 0 3px; }
+      .hub-gtip-text { font-size:15px; line-height:1.6; color:var(--hub-ink); margin:0; white-space:pre-line; }
+      @media (max-width:520px) {
+        .hub-gram:has(.hub-gsections) { padding:14px 10px; }
+        .hub-gcard { padding:12px 11px; }
+        .hub-gtip { padding:12px 11px; gap:9px; }
+        .hub-gtable { font-size:13.5px; }
+        .hub-gtable th, .hub-gtable td { padding:7px 6px; }
+      }
+
       /* --- kafelki linkow --- */
       .hub-links { display:flex; flex-direction:column; gap:8px; margin-top:14px; }
       .hub-link-tile { display:flex; align-items:center; gap:12px; text-decoration:none;
@@ -2534,6 +2571,14 @@ video {
             .hub-ex-opt.is-ok { border-color: #16a34a; background: #f0fdf4; color: #15803d; }
             .hub-ex-opt.is-bad { border-color: #dc2626; background: #fef2f2; color: #b91c1c; text-decoration: line-through; }
             .hub-ex-opt.is-key { border-color: #16a34a; border-style: dashed; }
+            .hub-ex-table-wrap { overflow-x: auto; margin: 0 0 12px; }
+            .hub-ex-table { width: 100%; border-collapse: collapse; }
+            .hub-ex-table th { text-align: left; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--hub-muted); padding: 4px 6px 8px; }
+            .hub-ex-table td { padding: 8px 6px; border-top: 1px solid var(--hub-line); vertical-align: middle; }
+            .hub-ex-table td.hub-ex-num { width: 1%; white-space: nowrap; }
+            .hub-ex-table .hub-ex-input { width: 100%; min-width: 90px; text-align: left; }
+            .hub-ex-img { width: 1%; }
+            .hub-ex-img svg { display: block; height: 40px; width: auto; max-width: 64px; box-shadow: 0 0 0 1px #cbd5e1; }
             .hub-ex-saved { font-size: 12.5px; color: var(--hub-muted); margin: 0 0 14px; }
         </style>
         <section id="hub-exercises-view" class="hidden no-print flex-grow flex items-start justify-center relative z-20">
@@ -3040,6 +3085,200 @@ video {
                                     "sentenceWithGap": "She hopes to [gap] the award this year after being nominated twice.",
                                     "firstLetterHint": "w"
                         }
+            ],
+            "Lekcja 4 (25.09)": [
+                        {
+                                    "word": "modern",
+                                    "translation": "nowoczesny",
+                                    "definition": "having the latest design or technology",
+                                    "pos": "adj",
+                                    "sentenceWithGap": "The company bought [gap] machines with the latest technology last year.",
+                                    "firstLetterHint": "m"
+                        },
+                        {
+                                    "word": "cuisine",
+                                    "translation": "kuchnia (styl gotowania)",
+                                    "definition": "a style of cooking from a particular country",
+                                    "pos": "n",
+                                    "sentenceWithGap": "I love Italian [gap], especially pizza and pasta.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "plant",
+                                    "translation": "zakład produkcyjny, fabryka",
+                                    "definition": "a factory where something is produced",
+                                    "pos": "n",
+                                    "sentenceWithGap": "He works at a chemical [gap] that produces plastic.",
+                                    "firstLetterHint": "p"
+                        },
+                        {
+                                    "word": "look at",
+                                    "translation": "patrzeć na",
+                                    "definition": "to turn your eyes towards something",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "Please [gap] the screen and read the numbers out loud.",
+                                    "firstLetterHint": "l"
+                        },
+                        {
+                                    "word": "look for",
+                                    "translation": "szukać",
+                                    "definition": "to try to find something",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "Can you help me [gap] my keys? I can't find them anywhere.",
+                                    "firstLetterHint": "l"
+                        },
+                        {
+                                    "word": "look after",
+                                    "translation": "opiekować się",
+                                    "definition": "to take care of someone or something",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "My mum will [gap] our dog while we are on holiday.",
+                                    "firstLetterHint": "l"
+                        },
+                        {
+                                    "word": "look up to",
+                                    "translation": "podziwiać, wzorować się na",
+                                    "definition": "to admire and respect someone",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "I really [gap] my grandfather: he is my hero and I want to be like him one day.",
+                                    "firstLetterHint": "l"
+                        },
+                        {
+                                    "word": "look down on",
+                                    "translation": "patrzeć z góry na",
+                                    "definition": "to think you are better than someone",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "Don't [gap] people just because they have less money than you.",
+                                    "firstLetterHint": "l"
+                        },
+                        {
+                                    "word": "Health and Safety",
+                                    "translation": "BHP",
+                                    "definition": "rules that protect people from accidents and illness at work",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "Every company must follow [gap] rules to protect workers from accidents.",
+                                    "firstLetterHint": "h"
+                        },
+                        {
+                                    "word": "complacency",
+                                    "translation": "uśpiona czujność, samozadowolenie",
+                                    "definition": "feeling too relaxed because you think nothing bad will happen",
+                                    "pos": "n",
+                                    "sentenceWithGap": "Many accidents at work are caused by [gap]: workers think \"nothing will happen to me\" and stop being careful.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "complacent",
+                                    "translation": "zbyt pewny siebie, nieczujny",
+                                    "definition": "too relaxed, so you don't see danger",
+                                    "pos": "adj",
+                                    "sentenceWithGap": "After many years without an accident, the workers felt too safe, became [gap] and stopped checking the machines.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "compliant",
+                                    "translation": "zgodny (z przepisami)",
+                                    "definition": "following the rules or laws",
+                                    "pos": "adj",
+                                    "sentenceWithGap": "All our machines are fully [gap] with EU safety rules.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "caution",
+                                    "translation": "ostrożność",
+                                    "definition": "great care to avoid danger",
+                                    "pos": "n",
+                                    "sentenceWithGap": "Please drive with [gap]: the road is icy.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "warning",
+                                    "translation": "ostrzeżenie",
+                                    "definition": "something that tells you about possible danger",
+                                    "pos": "n",
+                                    "sentenceWithGap": "The red light on the machine is a [gap] that something is wrong.",
+                                    "firstLetterHint": "w"
+                        },
+                        {
+                                    "word": "Be careful",
+                                    "translation": "Uważaj. / Bądź ostrożny.",
+                                    "definition": "used to tell someone to avoid danger",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "[gap] with that knife, it's very sharp.",
+                                    "firstLetterHint": "b"
+                        },
+                        {
+                                    "word": "hi-vis vest",
+                                    "translation": "kamizelka odblaskowa",
+                                    "definition": "a bright jacket without sleeves that helps people see you",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "Workers near the road wear a [gap] so drivers can see them easily.",
+                                    "firstLetterHint": "h"
+                        },
+                        {
+                                    "word": "hard hat",
+                                    "translation": "kask ochronny",
+                                    "definition": "a strong hat that protects your head at work",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "You must wear a [gap] on the building site because things can fall on your head.",
+                                    "firstLetterHint": "h"
+                        },
+                        {
+                                    "word": "safety goggles",
+                                    "translation": "okulary ochronne, gogle",
+                                    "definition": "special glasses that protect your eyes",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "Put on your [gap] to protect your eyes from dust.",
+                                    "firstLetterHint": "s"
+                        },
+                        {
+                                    "word": "gloves",
+                                    "translation": "rękawice (ochronne)",
+                                    "definition": "things you wear to protect your hands",
+                                    "pos": "n",
+                                    "sentenceWithGap": "Wear [gap] when you work with sharp metal, so you don't cut your hands.",
+                                    "firstLetterHint": "g"
+                        },
+                        {
+                                    "word": "construction site",
+                                    "translation": "plac budowy",
+                                    "definition": "a place where a building is being built",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "There is a lot of noise from the [gap] next to our house, where they are building a new hotel.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "on-site",
+                                    "translation": "na miejscu, na terenie zakładu",
+                                    "definition": "at the place where the work is done",
+                                    "pos": "adv",
+                                    "sentenceWithGap": "We have a doctor [gap], so workers don't have to go to hospital for small injuries.",
+                                    "firstLetterHint": "o"
+                        },
+                        {
+                                    "word": "off-site",
+                                    "translation": "poza terenem zakładu",
+                                    "definition": "away from the main place of work",
+                                    "pos": "adv",
+                                    "sentenceWithGap": "The training for new workers will be [gap], at a hotel about two kilometres from our factory.",
+                                    "firstLetterHint": "o"
+                        },
+                        {
+                                    "word": "fire extinguisher",
+                                    "translation": "gaśnica",
+                                    "definition": "a red container you use to put out a small fire",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "He used a [gap] to put out the small fire in the kitchen.",
+                                    "firstLetterHint": "f"
+                        },
+                        {
+                                    "word": "fire exit",
+                                    "translation": "wyjście ewakuacyjne",
+                                    "definition": "a door you use to leave a building in a fire",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "When the fire alarm rings, go out through the nearest [gap]: it has a green sign with a running man above the door.",
+                                    "firstLetterHint": "f"
+                        }
             ]
 };
 
@@ -3052,8 +3291,8 @@ video {
         "teacherWhatsApp": "48797620710",
         "storageKey": "hub_lukasz-b_2026-09",
         "studentKey": "hub_lukasz-b",
-        "stamp": "aktualizacja po lekcji 3, 18.09.2026",
-        "lastLessonPhrase": "lekcji 3",
+        "stamp": "aktualizacja po lekcji 4, 25.09.2026",
+        "lastLessonPhrase": "lekcji 4",
         "lessons": [
                 {
                         "label": "Lekcja 1",
@@ -3075,6 +3314,13 @@ video {
                         "categoryKey": "Lekcja 3 (18.09)",
                         "vocabCount": 16,
                         "topic": "Swobodna rozmowa na różne tematy, z bieżącymi poprawkami językowymi"
+                },
+                {
+                        "label": "Lekcja 4",
+                        "dateLabel": "25.09.2026",
+                        "categoryKey": "Lekcja 4 (25.09)",
+                        "vocabCount": 24,
+                        "topic": "Powtórka stopniowania przymiotników, rozmowa o pracy i nauce oraz wprowadzenie słownictwa BHP (Health and Safety)"
                 }
         ],
         "grammar": [
@@ -3086,6 +3332,7 @@ video {
                         "correction": "",
                         "items": [],
                         "explanation": "'information' jest niepoliczalne, więc mówimy 'so much information', a nie 'so many information'. Czasowniki nieregularne z tej lekcji przećwiczysz w osobnym module Czasowniki.",
+                        "sections": [],
                         "links": [
                                 {
                                         "label": "WSZYSTKIE czasy. Tak, znowu. Ale trochę inaczej | ROCK YOUR ENGLISH #214",
@@ -3103,6 +3350,7 @@ video {
                         "correction": "",
                         "items": [],
                         "explanation": "Wprowadzenie tematu - filmik i test do samodzielnego przećwiczenia różnicy (np. bored vs boring).",
+                        "sections": [],
                         "links": [
                                 {
                                         "label": "Przymiotniki z -ed / -ing | ROCK YOUR ENGLISH #81",
@@ -3126,6 +3374,7 @@ video {
                         "correction": "at work",
                         "items": [],
                         "explanation": "Mówiąc o miejscu pracy używamy \"at work\", nie \"in work\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3136,6 +3385,7 @@ video {
                         "correction": "I go to help him",
                         "items": [],
                         "explanation": "Po \"go to\" wstawiamy bezokolicznik celu - \"go to help him\", nie \"go to him help\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3146,6 +3396,7 @@ video {
                         "correction": "I speak one language",
                         "items": [],
                         "explanation": "\"Speak\" + język nie wymaga przyimka \"in\" - mówimy \"I speak one language\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3156,6 +3407,7 @@ video {
                         "correction": "in english lesson",
                         "items": [],
                         "explanation": "Mówiąc o zajęciach/lekcji używamy przyimka \"in\", nie \"on\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3166,6 +3418,7 @@ video {
                         "correction": "doing memory tests",
                         "items": [],
                         "explanation": "Z rzeczownikiem \"test\" używamy czasownika \"do\", nie \"make\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3176,6 +3429,7 @@ video {
                         "correction": "when I was a child I didn't think like this…",
                         "items": [],
                         "explanation": "Mówiąc o przeszłości używamy czasu Past Simple - \"didn't think\", nie \"don't think\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3186,6 +3440,7 @@ video {
                         "correction": "",
                         "items": [],
                         "explanation": "",
+                        "sections": [],
                         "links": [
                                 {
                                         "label": "Stopniowanie przymiotników | ROCK YOUR ENGLISH #128",
@@ -3206,9 +3461,40 @@ video {
                                         "questions": []
                                 }
                         ]
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "25.09.2026",
+                        "topic": "Poprawki z rozmowy: Present Simple",
+                        "mistake": "I didn't see my boss every day.",
+                        "correction": "I don't see my boss every day.",
+                        "items": [],
+                        "explanation": "\"Every day\" to coś, co dzieje się regularnie teraz, więc używamy Present Simple, nie Past Simple.",
+                        "sections": [],
+                        "links": []
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "25.09.2026",
+                        "topic": "",
+                        "mistake": "Because he live in Warsaw",
+                        "correction": "Because he lives in Warsaw",
+                        "items": [],
+                        "explanation": "W Present Simple po he/she/it dodajemy -s do czasownika.",
+                        "sections": [],
+                        "links": []
                 }
         ],
-        "homework": [],
+        "homework": [
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "25.09.2026",
+                        "label": "Unit 13 Vocabulary — Health and Safety",
+                        "url": "https://www.english4hotels.com/unit/health-and-safety/vocabulary",
+                        "type": "website",
+                        "questions": []
+                }
+        ],
         "media": [
                 {
                         "lessonLabel": "Lekcja 2",
@@ -3232,6 +3518,22 @@ video {
                         "label": "Telling the time in English",
                         "url": "https://www.youtube.com/watch?v=WLAZpKY-9Ks",
                         "type": "youtube",
+                        "questions": []
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "25.09.2026",
+                        "label": "Health and Safety in the Printing Industry: A Guide",
+                        "url": "https://lindstromgroup.com/uk/article/why-are-safety-measures-so-important-in-the-printing-industry/",
+                        "type": "article",
+                        "questions": []
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "25.09.2026",
+                        "label": "Health and Safety Glossary | Essential OSH Terminology | Arinite",
+                        "url": "https://www.arinite.com/blog/essential-health-and-safety-keywords-a-complete-international-glossary-of-terminology",
+                        "type": "article",
                         "questions": []
                 }
         ],
@@ -3259,10 +3561,326 @@ video {
                         "word": "Thursday",
                         "translation": "czwartek",
                         "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "fixed",
+                        "translation": "naprawiony",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "bored",
+                        "translation": "znudzony",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "caution",
+                        "translation": "ostrożność",
+                        "note": ""
                 }
         ],
         "writingSpeaking": [],
-        "exercises": [],
+        "exercises": [
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "25.09.2026",
+                        "title": "Countries and nationalities",
+                        "instructions": "Wpisz po angielsku nazwę kraju i narodowość. Pamiętaj, że narodowość piszemy wielką literą: Polish, nie polish.",
+                        "layout": "table",
+                        "columns": [
+                                "Flag",
+                                "Country",
+                                "Nationality"
+                        ],
+                        "wordBox": [],
+                        "letters": false,
+                        "items": [
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Germany",
+                                                "German"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"42.67\" fill=\"#000000\"/><rect y=\"42.67\" width=\"128\" height=\"42.66\" fill=\"#DD0000\"/><rect y=\"85.33\" width=\"128\" height=\"42.67\" fill=\"#FFCC00\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Spain",
+                                                "Spanish"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"32\" fill=\"#AA151B\"/><rect y=\"32\" width=\"128\" height=\"64\" fill=\"#F1BF00\"/><rect y=\"96\" width=\"128\" height=\"32\" fill=\"#AA151B\"/><path d=\"M 32,52 L 48,52 L 48,72 C 48,80 32,80 32,72 Z\" fill=\"#AA151B\"/><rect x=\"36\" y=\"56\" width=\"8\" height=\"16\" fill=\"#F1BF00\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                [
+                                                        "the UK",
+                                                        "UK",
+                                                        "the United Kingdom",
+                                                        "United Kingdom",
+                                                        "Great Britain",
+                                                        "Britain"
+                                                ],
+                                                "British"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><clipPath id=\"hubflag-uk-t\"><path d=\"M64,64h64v64zv64H0zH0V0zV0h64z\"/><\/clipPath><rect width=\"128\" height=\"128\" fill=\"#012169\"/><path d=\"M0,0L128,128M128,0L0,128\" stroke=\"#FFFFFF\" stroke-width=\"25.6\"/><path d=\"M0,0L128,128M128,0L0,128\" clip-path=\"url(#hubflag-uk-t)\" stroke=\"#C8102E\" stroke-width=\"17\"/><path d=\"M64,0v128M0,64h128\" stroke=\"#FFFFFF\" stroke-width=\"42.7\"/><path d=\"M64,0v128M0,64h128\" stroke=\"#C8102E\" stroke-width=\"25.6\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Russia",
+                                                "Russian"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"42.67\" fill=\"#FFFFFF\"/><rect y=\"42.67\" width=\"128\" height=\"42.66\" fill=\"#0039A6\"/><rect y=\"85.33\" width=\"128\" height=\"42.67\" fill=\"#D52B1E\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Italy",
+                                                "Italian"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"42.67\" height=\"128\" fill=\"#009246\"/><rect x=\"42.67\" width=\"42.66\" height=\"128\" fill=\"#F4F5F0\"/><rect x=\"85.33\" width=\"42.67\" height=\"128\" fill=\"#CE2B37\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "China",
+                                                "Chinese"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"128\" fill=\"#EE1C25\"/><path d=\"M32,12.8L36.31,26.07L50.26,26.07L38.97,34.27L43.29,47.53L32,39.33L20.71,47.53L25.03,34.27L13.74,26.07L27.69,26.07ZM58.51,16.09L61.56,12.59L59.17,8.6L63.45,10.42L66.5,6.91L66.1,11.54L70.38,13.36L65.84,14.4L65.44,19.04L63.04,15.05ZM70.46,26.51L74.64,24.46L73.98,19.85L77.22,23.19L81.39,21.14L79.22,25.25L82.46,28.59L77.88,27.79L75.7,31.91L75.05,27.3ZM70.65,43.04L75.29,42.88L76.57,38.4L78.17,42.77L82.81,42.61L79.15,45.47L80.75,49.84L76.89,47.24L73.23,50.11L74.5,45.64ZM59,53.6L63.35,55.24L66.26,51.61L66.04,56.26L70.39,57.9L65.91,59.13L65.69,63.77L63.14,59.89L58.65,61.12L61.56,57.49Z\" fill=\"#FFFF00\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Sweden",
+                                                "Swedish"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"128\" fill=\"#006AA7\"/><rect x=\"40\" width=\"20\" height=\"128\" fill=\"#FECC00\"/><rect y=\"54\" width=\"128\" height=\"20\" fill=\"#FECC00\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Portugal",
+                                                "Portuguese"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"128\" fill=\"#FF0000\"/><rect width=\"51.2\" height=\"128\" fill=\"#006600\"/><circle cx=\"51.2\" cy=\"64\" r=\"22\" fill=\"none\" stroke=\"#FFE000\" stroke-width=\"5\"/><path d=\"M39.2,50H63.2V68C63.2,76 57,80 51.2,82C45.4,80 39.2,76 39.2,68Z\" fill=\"#FF0000\"/><path d=\"M43.2,54H59.2V67C59.2,72 55,75 51.2,76.5C47.4,75 43.2,72 43.2,67Z\" fill=\"#FFFFFF\"/><g fill=\"#003399\"><rect x=\"49.2\" y=\"56\" width=\"4\" height=\"4\"/><rect x=\"45.2\" y=\"62\" width=\"4\" height=\"4\"/><rect x=\"49.2\" y=\"62\" width=\"4\" height=\"4\"/><rect x=\"53.2\" y=\"62\" width=\"4\" height=\"4\"/><rect x=\"49.2\" y=\"68\" width=\"4\" height=\"4\"/><\/g><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                [
+                                                        "the USA",
+                                                        "USA",
+                                                        "the US",
+                                                        "US",
+                                                        "the United States",
+                                                        "United States",
+                                                        "the United States of America",
+                                                        "United States of America",
+                                                        "America"
+                                                ],
+                                                "American"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"128\" fill=\"#FFFFFF\"/><path d=\"M0,0h128v9.85h-128ZM0,19.69h128v9.85h-128ZM0,39.38h128v9.85h-128ZM0,59.08h128v9.85h-128ZM0,78.77h128v9.85h-128ZM0,98.46h128v9.85h-128ZM0,118.15h128v9.85h-128Z\" fill=\"#B22234\"/><rect width=\"64\" height=\"68.92\" fill=\"#3C3B6E\"/><path d=\"M5.33,4.29L5.92,6.09L7.81,6.09L6.28,7.2L6.86,9L5.33,7.89L3.81,9L4.39,7.2L2.86,6.09L4.75,6.09ZM16,4.29L16.58,6.09L18.47,6.09L16.94,7.2L17.53,9L16,7.89L14.47,9L15.06,7.2L13.53,6.09L15.42,6.09ZM26.67,4.29L27.25,6.09L29.14,6.09L27.61,7.2L28.19,9L26.67,7.89L25.14,9L25.72,7.2L24.19,6.09L26.08,6.09ZM37.33,4.29L37.92,6.09L39.81,6.09L38.28,7.2L38.86,9L37.33,7.89L35.81,9L36.39,7.2L34.86,6.09L36.75,6.09ZM48,4.29L48.58,6.09L50.47,6.09L48.94,7.2L49.53,9L48,7.89L46.47,9L47.06,7.2L45.53,6.09L47.42,6.09ZM58.67,4.29L59.25,6.09L61.14,6.09L59.61,7.2L60.19,9L58.67,7.89L57.14,9L57.72,7.2L56.19,6.09L58.08,6.09ZM10.67,11.18L11.25,12.98L13.14,12.98L11.61,14.09L12.19,15.89L10.67,14.78L9.14,15.89L9.72,14.09L8.19,12.98L10.08,12.98ZM21.33,11.18L21.92,12.98L23.81,12.98L22.28,14.09L22.86,15.89L21.33,14.78L19.81,15.89L20.39,14.09L18.86,12.98L20.75,12.98ZM32,11.18L32.58,12.98L34.47,12.98L32.94,14.09L33.53,15.89L32,14.78L30.47,15.89L31.06,14.09L29.53,12.98L31.42,12.98ZM42.67,11.18L43.25,12.98L45.14,12.98L43.61,14.09L44.19,15.89L42.67,14.78L41.14,15.89L41.72,14.09L40.19,12.98L42.08,12.98ZM53.33,11.18L53.92,12.98L55.81,12.98L54.28,14.09L54.86,15.89L53.33,14.78L51.81,15.89L52.39,14.09L50.86,12.98L52.75,12.98ZM5.33,18.08L5.92,19.87L7.81,19.87L6.28,20.98L6.86,22.78L5.33,21.67L3.81,22.78L4.39,20.98L2.86,19.87L4.75,19.87ZM16,18.08L16.58,19.87L18.47,19.87L16.94,20.98L17.53,22.78L16,21.67L14.47,22.78L15.06,20.98L13.53,19.87L15.42,19.87ZM26.67,18.08L27.25,19.87L29.14,19.87L27.61,20.98L28.19,22.78L26.67,21.67L25.14,22.78L25.72,20.98L24.19,19.87L26.08,19.87ZM37.33,18.08L37.92,19.87L39.81,19.87L38.28,20.98L38.86,22.78L37.33,21.67L35.81,22.78L36.39,20.98L34.86,19.87L36.75,19.87ZM48,18.08L48.58,19.87L50.47,19.87L48.94,20.98L49.53,22.78L48,21.67L46.47,22.78L47.06,20.98L45.53,19.87L47.42,19.87ZM58.67,18.08L59.25,19.87L61.14,19.87L59.61,20.98L60.19,22.78L58.67,21.67L57.14,22.78L57.72,20.98L56.19,19.87L58.08,19.87ZM10.67,24.97L11.25,26.77L13.14,26.77L11.61,27.88L12.19,29.67L10.67,28.56L9.14,29.67L9.72,27.88L8.19,26.77L10.08,26.77ZM21.33,24.97L21.92,26.77L23.81,26.77L22.28,27.88L22.86,29.67L21.33,28.56L19.81,29.67L20.39,27.88L18.86,26.77L20.75,26.77ZM32,24.97L32.58,26.77L34.47,26.77L32.94,27.88L33.53,29.67L32,28.56L30.47,29.67L31.06,27.88L29.53,26.77L31.42,26.77ZM42.67,24.97L43.25,26.77L45.14,26.77L43.61,27.88L44.19,29.67L42.67,28.56L41.14,29.67L41.72,27.88L40.19,26.77L42.08,26.77ZM53.33,24.97L53.92,26.77L55.81,26.77L54.28,27.88L54.86,29.67L53.33,28.56L51.81,29.67L52.39,27.88L50.86,26.77L52.75,26.77ZM5.33,31.86L5.92,33.66L7.81,33.66L6.28,34.77L6.86,36.56L5.33,35.45L3.81,36.56L4.39,34.77L2.86,33.66L4.75,33.66ZM16,31.86L16.58,33.66L18.47,33.66L16.94,34.77L17.53,36.56L16,35.45L14.47,36.56L15.06,34.77L13.53,33.66L15.42,33.66ZM26.67,31.86L27.25,33.66L29.14,33.66L27.61,34.77L28.19,36.56L26.67,35.45L25.14,36.56L25.72,34.77L24.19,33.66L26.08,33.66ZM37.33,31.86L37.92,33.66L39.81,33.66L38.28,34.77L38.86,36.56L37.33,35.45L35.81,36.56L36.39,34.77L34.86,33.66L36.75,33.66ZM48,31.86L48.58,33.66L50.47,33.66L48.94,34.77L49.53,36.56L48,35.45L46.47,36.56L47.06,34.77L45.53,33.66L47.42,33.66ZM58.67,31.86L59.25,33.66L61.14,33.66L59.61,34.77L60.19,36.56L58.67,35.45L57.14,36.56L57.72,34.77L56.19,33.66L58.08,33.66ZM10.67,38.75L11.25,40.55L13.14,40.55L11.61,41.66L12.19,43.46L10.67,42.35L9.14,43.46L9.72,41.66L8.19,40.55L10.08,40.55ZM21.33,38.75L21.92,40.55L23.81,40.55L22.28,41.66L22.86,43.46L21.33,42.35L19.81,43.46L20.39,41.66L18.86,40.55L20.75,40.55ZM32,38.75L32.58,40.55L34.47,40.55L32.94,41.66L33.53,43.46L32,42.35L30.47,43.46L31.06,41.66L29.53,40.55L31.42,40.55ZM42.67,38.75L43.25,40.55L45.14,40.55L43.61,41.66L44.19,43.46L42.67,42.35L41.14,43.46L41.72,41.66L40.19,40.55L42.08,40.55ZM53.33,38.75L53.92,40.55L55.81,40.55L54.28,41.66L54.86,43.46L53.33,42.35L51.81,43.46L52.39,41.66L50.86,40.55L52.75,40.55ZM5.33,45.65L5.92,47.44L7.81,47.44L6.28,48.55L6.86,50.35L5.33,49.24L3.81,50.35L4.39,48.55L2.86,47.44L4.75,47.44ZM16,45.65L16.58,47.44L18.47,47.44L16.94,48.55L17.53,50.35L16,49.24L14.47,50.35L15.06,48.55L13.53,47.44L15.42,47.44ZM26.67,45.65L27.25,47.44L29.14,47.44L27.61,48.55L28.19,50.35L26.67,49.24L25.14,50.35L25.72,48.55L24.19,47.44L26.08,47.44ZM37.33,45.65L37.92,47.44L39.81,47.44L38.28,48.55L38.86,50.35L37.33,49.24L35.81,50.35L36.39,48.55L34.86,47.44L36.75,47.44ZM48,45.65L48.58,47.44L50.47,47.44L48.94,48.55L49.53,50.35L48,49.24L46.47,50.35L47.06,48.55L45.53,47.44L47.42,47.44ZM58.67,45.65L59.25,47.44L61.14,47.44L59.61,48.55L60.19,50.35L58.67,49.24L57.14,50.35L57.72,48.55L56.19,47.44L58.08,47.44ZM10.67,52.54L11.25,54.34L13.14,54.34L11.61,55.45L12.19,57.24L10.67,56.13L9.14,57.24L9.72,55.45L8.19,54.34L10.08,54.34ZM21.33,52.54L21.92,54.34L23.81,54.34L22.28,55.45L22.86,57.24L21.33,56.13L19.81,57.24L20.39,55.45L18.86,54.34L20.75,54.34ZM32,52.54L32.58,54.34L34.47,54.34L32.94,55.45L33.53,57.24L32,56.13L30.47,57.24L31.06,55.45L29.53,54.34L31.42,54.34ZM42.67,52.54L43.25,54.34L45.14,54.34L43.61,55.45L44.19,57.24L42.67,56.13L41.14,57.24L41.72,55.45L40.19,54.34L42.08,54.34ZM53.33,52.54L53.92,54.34L55.81,54.34L54.28,55.45L54.86,57.24L53.33,56.13L51.81,57.24L52.39,55.45L50.86,54.34L52.75,54.34ZM5.33,59.43L5.92,61.23L7.81,61.23L6.28,62.34L6.86,64.13L5.33,63.02L3.81,64.13L4.39,62.34L2.86,61.23L4.75,61.23ZM16,59.43L16.58,61.23L18.47,61.23L16.94,62.34L17.53,64.13L16,63.02L14.47,64.13L15.06,62.34L13.53,61.23L15.42,61.23ZM26.67,59.43L27.25,61.23L29.14,61.23L27.61,62.34L28.19,64.13L26.67,63.02L25.14,64.13L25.72,62.34L24.19,61.23L26.08,61.23ZM37.33,59.43L37.92,61.23L39.81,61.23L38.28,62.34L38.86,64.13L37.33,63.02L35.81,64.13L36.39,62.34L34.86,61.23L36.75,61.23ZM48,59.43L48.58,61.23L50.47,61.23L48.94,62.34L49.53,64.13L48,63.02L46.47,64.13L47.06,62.34L45.53,61.23L47.42,61.23ZM58.67,59.43L59.25,61.23L61.14,61.23L59.61,62.34L60.19,64.13L58.67,63.02L57.14,64.13L57.72,62.34L56.19,61.23L58.08,61.23Z\" fill=\"#FFFFFF\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Croatia",
+                                                "Croatian"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"42.67\" fill=\"#FF0000\"/><rect y=\"42.67\" width=\"128\" height=\"42.66\" fill=\"#FFFFFF\"/><rect y=\"85.33\" width=\"128\" height=\"42.67\" fill=\"#0000FF\"/><g transform=\"translate(44, 40)\"><rect width=\"40\" height=\"48\" fill=\"#FFFFFF\" rx=\"2\" stroke=\"#000000\" stroke-width=\"2\"/><rect width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"16\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"32\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"8\" y=\"9.6\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"24\" y=\"9.6\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect y=\"19.2\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"16\" y=\"19.2\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"32\" y=\"19.2\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"8\" y=\"28.8\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"24\" y=\"28.8\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect y=\"38.4\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"16\" y=\"38.4\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><rect x=\"32\" y=\"38.4\" width=\"8\" height=\"9.6\" fill=\"#FF0000\"/><\/g><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Japan",
+                                                "Japanese"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"128\" fill=\"#FFFFFF\"/><circle cx=\"64\" cy=\"64\" r=\"38.4\" fill=\"#BC002D\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "France",
+                                                "French"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"42.67\" height=\"128\" fill=\"#002395\"/><rect x=\"42.67\" width=\"42.66\" height=\"128\" fill=\"#FFFFFF\"/><rect x=\"85.33\" width=\"42.67\" height=\"128\" fill=\"#ED2939\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Slovakia",
+                                                [
+                                                        "Slovak",
+                                                        "Slovakian"
+                                                ]
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"42.67\" fill=\"#FFFFFF\"/><rect y=\"42.67\" width=\"128\" height=\"42.66\" fill=\"#0B4EA2\"/><rect y=\"85.33\" width=\"128\" height=\"42.67\" fill=\"#EE1C25\"/><g transform=\"translate(22, 32)\"><path d=\"M0,0H40V32C40,44 28,50 20,54C12,50 0,44 0,32Z\" fill=\"#EE1C25\" stroke=\"#FFFFFF\" stroke-width=\"3\"/><path d=\"M18,8h4v6h7v4h-7v5h9v4h-9v13h-4v-13h-9v-4h9v-5h-7v-4h7z\" fill=\"#FFFFFF\"/><path d=\"M3,42C8,34 13,36 15,40C17,33 23,33 25,40C27,36 32,34 37,42C33,47 27,51 20,54C13,51 7,47 3,42Z\" fill=\"#0B4EA2\"/><\/g><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Greece",
+                                                "Greek"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"128\" fill=\"#0D5EAF\"/><rect y=\"14.22\" width=\"128\" height=\"14.22\" fill=\"#FFFFFF\"/><rect y=\"42.66\" width=\"128\" height=\"14.22\" fill=\"#FFFFFF\"/><rect y=\"71.11\" width=\"128\" height=\"14.22\" fill=\"#FFFFFF\"/><rect y=\"99.55\" width=\"128\" height=\"14.22\" fill=\"#FFFFFF\"/><rect width=\"71.11\" height=\"71.11\" fill=\"#0D5EAF\"/><rect x=\"28.44\" width=\"14.22\" height=\"71.11\" fill=\"#FFFFFF\"/><rect y=\"28.44\" width=\"71.11\" height=\"14.22\" fill=\"#FFFFFF\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                [
+                                                        "the Netherlands",
+                                                        "Netherlands",
+                                                        "Holland"
+                                                ],
+                                                "Dutch"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"42.67\" fill=\"#AE1C28\"/><rect y=\"42.67\" width=\"128\" height=\"42.66\" fill=\"#FFFFFF\"/><rect y=\"85.33\" width=\"128\" height=\"42.67\" fill=\"#21468B\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Ukraine",
+                                                "Ukrainian"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"64\" fill=\"#0057B7\"/><rect y=\"64\" width=\"128\" height=\"64\" fill=\"#FFD700\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Finland",
+                                                "Finnish"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"128\" fill=\"#FFFFFF\"/><rect x=\"36\" width=\"24\" height=\"128\" fill=\"#002F6C\"/><rect y=\"52\" width=\"128\" height=\"24\" fill=\"#002F6C\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                "Switzerland",
+                                                "Swiss"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"128\" fill=\"#DA291C\"/><path d=\"M52,24h24v28h28v24h-28v28h-24v-28h-28v-24h28z\" fill=\"#FFFFFF\"/><\/svg>"
+                                },
+                                {
+                                        "text": "[gap] | [gap]",
+                                        "answers": [
+                                                [
+                                                        "the Czech Republic",
+                                                        "Czech Republic",
+                                                        "Czechia"
+                                                ],
+                                                "Czech"
+                                        ],
+                                        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\"><rect width=\"128\" height=\"64\" fill=\"#FFFFFF\"/><rect y=\"64\" width=\"128\" height=\"64\" fill=\"#D7141A\"/><path d=\"M0,0L64,64L0,128Z\" fill=\"#11457E\"/><\/svg>"
+                                }
+                        ]
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "25.09.2026",
+                        "title": "Safety briefing at the plant",
+                        "instructions": "Przeczytaj odprawę BHP w zakładzie produkującym folię. Uzupełnij luki słowami z ramki. Każde słowo wykorzystaj raz.",
+                        "layout": "text",
+                        "columns": [],
+                        "wordBox": [
+                                "off-site",
+                                "gloves",
+                                "caution",
+                                "plant",
+                                "fire exit",
+                                "complacent",
+                                "hard hat",
+                                "warning",
+                                "Health and Safety",
+                                "safety goggles",
+                                "compliant",
+                                "hi-vis vest",
+                                "fire extinguisher",
+                                "on-site"
+                        ],
+                        "letters": false,
+                        "items": [
+                                {
+                                        "text": "Welcome to our [gap]. We produce plastic film here.",
+                                        "answers": [
+                                                "plant"
+                                        ]
+                                },
+                                {
+                                        "text": "Every new worker must complete [gap] training on the first day.",
+                                        "answers": [
+                                                "Health and Safety"
+                                        ]
+                                },
+                                {
+                                        "text": "In the production hall, always wear a [gap], so forklift drivers can see you.",
+                                        "answers": [
+                                                "hi-vis vest"
+                                        ]
+                                },
+                                {
+                                        "text": "Wear [gap] to protect your eyes and [gap] to protect your hands when you change the blades on the cutting machine.",
+                                        "answers": [
+                                                "safety goggles",
+                                                "gloves"
+                                        ]
+                                },
+                                {
+                                        "text": "In the warehouse, where rolls of film can fall from high shelves, you need a [gap].",
+                                        "answers": [
+                                                "hard hat"
+                                        ]
+                                },
+                                {
+                                        "text": "Please move with [gap] near the rollers.",
+                                        "answers": [
+                                                "caution"
+                                        ]
+                                },
+                                {
+                                        "text": "The machine beeps as a [gap] before it starts.",
+                                        "answers": [
+                                                "warning"
+                                        ]
+                                },
+                                {
+                                        "text": "If you see a small fire, use a [gap].",
+                                        "answers": [
+                                                "fire extinguisher"
+                                        ]
+                                },
+                                {
+                                        "text": "If the fire is big, leave the building through the nearest [gap].",
+                                        "answers": [
+                                                "fire exit"
+                                        ]
+                                },
+                                {
+                                        "text": "Our procedures are fully [gap] with EU rules, but rules are not enough.",
+                                        "answers": [
+                                                "compliant"
+                                        ]
+                                },
+                                {
+                                        "text": "After years without an accident, people become [gap] and stop being careful.",
+                                        "answers": [
+                                                "complacent"
+                                        ]
+                                },
+                                {
+                                        "text": "We have a first aid room [gap], and forklift training takes place [gap], at a training centre in the city.",
+                                        "answers": [
+                                                "on-site",
+                                                "off-site"
+                                        ]
+                                }
+                        ]
+                }
+        ],
         "distractors": [
                 {
                         "word": "stapler",
@@ -3388,6 +4006,41 @@ video {
                         "word": "at first",
                         "translation": "początkowo",
                         "pos": "phr"
+                },
+                {
+                        "word": "first aid kit",
+                        "translation": "apteczka",
+                        "pos": "phr"
+                },
+                {
+                        "word": "ear protectors",
+                        "translation": "ochronniki słuchu",
+                        "pos": "phr"
+                },
+                {
+                        "word": "safety shoes",
+                        "translation": "buty ochronne",
+                        "pos": "phr"
+                },
+                {
+                        "word": "abroad",
+                        "translation": "za granicą",
+                        "pos": "adv"
+                },
+                {
+                        "word": "overseas",
+                        "translation": "za oceanem",
+                        "pos": "adv"
+                },
+                {
+                        "word": "worldwide",
+                        "translation": "na całym świecie",
+                        "pos": "adv"
+                },
+                {
+                        "word": "overtime",
+                        "translation": "w nadgodzinach",
+                        "pos": "adv"
                 }
         ],
         "priorityVerbs": [],
@@ -3644,6 +4297,150 @@ video {
                         "lessons": [
                                 "Lekcja 3"
                         ]
+                },
+                {
+                        "word": "modern",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "cuisine",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "plant",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "look at",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "look for",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "look after",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "look up to",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "look down on",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "Health and Safety",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "complacency",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "complacent",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "compliant",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "caution",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "warning",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "Be careful",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "hi-vis vest",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "hard hat",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "safety goggles",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "gloves",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "construction site",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "on-site",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "off-site",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "fire extinguisher",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "fire exit",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
                 }
         ],
         "sentenceCount": 5,
@@ -3662,6 +4459,11 @@ video {
                         "lessonLabel": "Lekcja 3",
                         "dateLabel": "18.09.2026",
                         "text": "Warto obejrzeć filmik o stopniowaniu przymiotników, a potem zrobić do niego test. Przydatny będzie też test na kraje i narodowości. Następnie warto obejrzeć filmik o mówieniu godzin i głośno odpowiadać na pytania w jego trakcie. Na koniec, jeśli starczy czasu, warto przeczytać artykuł."
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "25.09.2026",
+                        "text": "Powtórz kraje i narodowości. Masz do tego nowe ćwiczenie z flagami w zakładce Ćwiczenia. Poczytaj artykuły o BHP i wypisz z nich słownictwo. Z dzisiejszej lekcji masz sporo słówek, więc poćwicz je na fiszkach i testach, a potem ułóż zdania i wyślij mi je na WhatsAppie."
                 }
         ]
 };
@@ -5452,6 +6254,42 @@ video {
                 .map(function (l) { return { label: l.label, dateLabel: l.dateLabel, items: map[l.label] }; });
         }
 
+        // Notatka graficzna do zagadnienia (opcjonalne g.sections, od 2026-09-25):
+        // kolorowe karty z punktami i przykladami, tabela porownawcza, ramka-wskazowka.
+        // **tekst** w srodku = wyroznienie. Wpisy bez sections renderuja sie jak dotad.
+        function gramInline(s) {
+            return escapeHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong class="hub-hl">$1</strong>');
+        }
+        function renderSections(list) {
+            if (!list || !list.length) return '';
+            return '<div class="hub-gsections">' + list.map(function (s) {
+                var tone = ' tone-' + (s.tone || 'blue');
+                var title = s.title ? '<p class="hub-gcard-title">' +
+                    (s.emoji ? '<span class="hub-gcard-emoji">' + escapeHtml(s.emoji) + '</span>' : '') +
+                    gramInline(s.title) + '</p>' : '';
+                if (s.type === 'tip') {
+                    return '<div class="hub-gtip' + tone + '">' +
+                        (s.emoji ? '<span class="hub-gtip-emoji">' + escapeHtml(s.emoji) + '</span>' : '') +
+                        '<div class="hub-gtip-body">' + (s.title ? '<p class="hub-gtip-title">' + gramInline(s.title) + '</p>' : '') +
+                        '<p class="hub-gtip-text">' + gramInline(s.text || '') + '</p></div></div>';
+                }
+                if (s.type === 'table') {
+                    return '<div class="hub-gcard' + tone + '">' + title +
+                        '<div class="hub-gtable-wrap"><table class="hub-gtable"><thead><tr>' +
+                        (s.head || []).map(function (h) { return '<th>' + gramInline(h) + '</th>'; }).join('') +
+                        '</tr></thead><tbody>' +
+                        (s.rows || []).map(function (r) {
+                            return '<tr>' + r.map(function (c) { return '<td>' + gramInline(c) + '</td>'; }).join('') + '</tr>';
+                        }).join('') + '</tbody></table></div></div>';
+                }
+                var points = (s.points && s.points.length) ? '<ul class="hub-gcard-points">' +
+                    s.points.map(function (p) { return '<li>' + gramInline(p) + '</li>'; }).join('') + '</ul>' : '';
+                var ex = (s.examples && s.examples.length) ? '<div class="hub-gcard-ex"><p class="hub-gcard-ex-label">Przykłady</p>' +
+                    s.examples.map(function (e) { return '<p class="hub-gcard-ex-line">' + gramInline(e) + '</p>'; }).join('') + '</div>' : '';
+                return '<div class="hub-gcard' + tone + '">' + title + points + ex + '</div>';
+            }).join('') + '</div>';
+        }
+
         function renderGrammar() {
             var box = el('hub-grammar-list');
             if (box) {
@@ -5490,6 +6328,7 @@ video {
                             return '<div class="hub-gram">' +
                                 topic + pair + items +
                                 (g.explanation ? '<p class="hub-gram-expl">' + escapeAndLinkify(g.explanation) + '</p>' : '') +
+                                renderSections(g.sections) +
                                 renderLinks(g.links) +
                                 '</div>';
                         }).join('');
@@ -5821,6 +6660,17 @@ video {
             return !!(ch && ch[gap] && ch[gap].length);
         }
         function exLetter(ex, i) { return ex.letters ? String.fromCharCode(65 + i) + ' ' : ''; }
+        // layout "table": text pozycji to komorki rozdzielone "|"; przy svg
+        // pierwsza kolumna jest obrazkiem, wiec komorki z lukami zaczynaja sie od 1.
+        function exCellOffset(ex) { return ex.items.some(function (it) { return it.svg; }) ? 1 : 0; }
+        function exGapColumn(ex, itIdx, gap) {
+            var cells = ex.items[itIdx].text.split('|'), seen = 0;
+            for (var c = 0; c < cells.length; c++) {
+                seen += cells[c].split('[gap]').length - 1;
+                if (gap < seen) return ex.columns[c + exCellOffset(ex)] || '';
+            }
+            return '';
+        }
         // Wynik jednego cwiczenia liczony z zapisanego stanu, nie z DOM - ten sam
         // rachunek dla ekranu i dla wiadomosci na WhatsApp.
         function exResult(exIdx) {
@@ -5834,7 +6684,12 @@ video {
                     if (String(val).trim()) filled++;
                     var good = String(val).trim() && exAccepted(a).some(function (x) { return exNorm(x) === exNorm(val); });
                     if (good) ok++;
-                    else wrong.push({ num: ex.layout === 'text' ? n : (itIdx + 1), val: String(val).trim() });
+                    else wrong.push({
+                        num: ex.layout === 'text' ? n
+                            : ex.layout === 'table' ? (itIdx + 1) + ', ' + exGapColumn(ex, itIdx, gap)
+                            : (itIdx + 1),
+                        val: String(val).trim()
+                    });
                 });
             });
             return { total: total, ok: ok, filled: filled, wrong: wrong };
@@ -5869,6 +6724,25 @@ video {
                 var body;
                 if (ex.layout === 'text') {
                     body = '<p class="hub-ex-text">' + ex.items.map(itemHtml).join(' ') + '</p>';
+                } else if (ex.layout === 'table') {
+                    var withSvg = exCellOffset(ex) === 1;
+                    body = '<div class="hub-ex-table-wrap"><table class="hub-ex-table"><thead><tr><th></th>' +
+                        ex.columns.map(function (c) { return '<th>' + escapeHtml(c) + '</th>'; }).join('') +
+                        '</tr></thead><tbody>' +
+                        ex.items.map(function (it, itIdx) {
+                            var gi = 0;
+                            var cells = it.text.split('|').map(function (cell) {
+                                var parts = cell.split('[gap]');
+                                return '<td>' + parts.map(function (p, i) {
+                                    return escapeHtml(p.trim()) + (i < parts.length - 1 ? gapHtml(it, itIdx, gi++) : '');
+                                }).join('') + '</td>';
+                            }).join('');
+                            // svg pochodzi z hub_input.json i przeszedl walidacje buildera.
+                            return '<tr><td class="hub-ex-num">' + (itIdx + 1) + '.</td>' +
+                                (withSvg ? '<td class="hub-ex-img" aria-hidden="true">' + it.svg + '</td>' : '') +
+                                cells + '</tr>';
+                        }).join('') +
+                        '</tbody></table></div>';
                 } else {
                     body = ex.items.map(function (it, itIdx) {
                         return '<div class="hub-ex-item"><span class="hub-ex-num">' + (itIdx + 1) + '.</span>' + itemHtml(it, itIdx) + '</div>';
