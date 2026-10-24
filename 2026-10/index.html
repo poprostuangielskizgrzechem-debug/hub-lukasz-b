@@ -2224,6 +2224,7 @@ video {
             <button type="button" class="hub-nav-btn" data-hub-nav="pronunciation">&#128266; Wymowa</button>
             <button type="button" class="hub-nav-btn" data-hub-nav="writing">&#128214; Teksty</button>
             <button type="button" class="hub-nav-btn" data-hub-nav="exercises">&#128203; &Cacute;wiczenia</button>
+            <button type="button" class="hub-nav-btn" data-hub-nav="games">&#127918; Gry</button>
             <button type="button" class="hub-nav-btn" data-hub-nav="sentences">&#9997;&#65039; Zdania</button>
         </nav>
         <!-- === HUB MODULE - END (nav) === -->
@@ -2696,6 +2697,33 @@ video {
             </div>
         </section>
         <!-- === HUB MODULE - END (exercises view) === -->
+        <!-- === HUB MODULE - START (games view) === -->
+        <section id="hub-games-view" class="hidden no-print flex-grow flex items-start justify-center relative z-20">
+            <div class="hub-shell">
+                <div class="hub-topbar"></div>
+                <div class="hub-inner">
+
+                    <div class="hub-head">
+                        <h2 class="hub-title">Gry</h2>
+                        <p class="hub-tagline">Gry z angielskim do zagrania na telefonie albo komputerze.</p>
+                    </div>
+
+                    <div id="hub-games-list"></div>
+
+                    <div class="hub-footer">
+                        <button type="button" class="hub-link-btn" data-hub-nav="home">&larr; Powr&oacute;t</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div id="hub-game-overlay" class="no-print" style="position:fixed; inset:0; z-index:9999; background:#fff; display:none; flex-direction:column;">
+            <div style="display:flex; justify-content:flex-end; padding:6px 10px; border-bottom:1px solid #ddd; background:#f7f7f7;">
+                <button type="button" class="hub-link-btn" id="hub-game-close">&#10005; Zamknij gr&#281;</button>
+            </div>
+            <iframe id="hub-game-frame" title="Gra" style="flex:1; width:100%; border:0;"></iframe>
+        </div>
+        <!-- === HUB MODULE - END (games view) === -->
         <!-- === HUB MODULE - START (sentences view) === -->
         <section id="hub-sentences-view" class="hidden no-print flex-grow flex items-start justify-center relative z-20">
             <div class="hub-shell">
@@ -3148,6 +3176,128 @@ video {
                                     "sentenceWithGap": "Before the meeting we made some [gap] about the weather and the weekend.",
                                     "firstLetterHint": "s"
                         }
+            ],
+            "Lekcja 4 (23.10)": [
+                        {
+                                    "word": "choose",
+                                    "translation": "wybierać",
+                                    "definition": "to pick one thing from many",
+                                    "pos": "v",
+                                    "sentenceWithGap": "There are three colours, so you have to [gap] one.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "within limits",
+                                    "translation": "w rozsądnych granicach",
+                                    "definition": "allowed, but not too much",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "There are no strict rules about breaks. You can take them when you want, [gap].",
+                                    "firstLetterHint": "w"
+                        },
+                        {
+                                    "word": "be willing to",
+                                    "translation": "być gotowym/skłonnym (coś zrobić)",
+                                    "definition": "to be happy to do something if needed",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "In this job you must [gap] learn new things.",
+                                    "firstLetterHint": "b"
+                        },
+                        {
+                                    "word": "chief",
+                                    "translation": "szef, główny (np. ds. handlu)",
+                                    "definition": "the most important person in a group",
+                                    "pos": "n",
+                                    "sentenceWithGap": "The EU's trade [gap] went to Beijing for talks.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "announce",
+                                    "translation": "ogłosić",
+                                    "definition": "to tell people something officially",
+                                    "pos": "v",
+                                    "sentenceWithGap": "Tomorrow the boss will [gap] the name of the new manager.",
+                                    "firstLetterHint": "a"
+                        },
+                        {
+                                    "word": "understanding",
+                                    "translation": "porozumienie",
+                                    "definition": "an agreement that is not a full deal yet",
+                                    "pos": "n",
+                                    "sentenceWithGap": "It isn't a full deal yet, only a first [gap] between the two sides.",
+                                    "firstLetterHint": "u"
+                        },
+                        {
+                                    "word": "ladder",
+                                    "translation": "drabina",
+                                    "definition": "a thing with steps you climb to go up",
+                                    "pos": "n",
+                                    "sentenceWithGap": "I climbed the [gap] to fix the lamp on the ceiling.",
+                                    "firstLetterHint": "l"
+                        },
+                        {
+                                    "word": "compete",
+                                    "translation": "konkurować",
+                                    "definition": "to try to be better than others",
+                                    "pos": "v",
+                                    "sentenceWithGap": "Small shops can't [gap] with big supermarkets on price.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "trade",
+                                    "translation": "handel",
+                                    "definition": "buying and selling between countries",
+                                    "pos": "n",
+                                    "sentenceWithGap": "Cars, machines and clothes are a big part of [gap] between Europe and China.",
+                                    "firstLetterHint": "t"
+                        },
+                        {
+                                    "word": "deal",
+                                    "translation": "umowa, układ",
+                                    "definition": "an agreement between two sides",
+                                    "pos": "n",
+                                    "sentenceWithGap": "We shook hands, so we have a [gap].",
+                                    "firstLetterHint": "d"
+                        },
+                        {
+                                    "word": "sell",
+                                    "translation": "sprzedawać",
+                                    "definition": "to give something for money",
+                                    "pos": "v",
+                                    "sentenceWithGap": "I'm going to [gap] my old car to my neighbour for 2,000 euros.",
+                                    "firstLetterHint": "s"
+                        },
+                        {
+                                    "word": "agree",
+                                    "translation": "zgadzać się",
+                                    "definition": "to say yes to the same idea",
+                                    "pos": "v",
+                                    "sentenceWithGap": "I [gap] with you, it's a good idea.",
+                                    "firstLetterHint": "a"
+                        },
+                        {
+                                    "word": "meeting",
+                                    "translation": "spotkanie, zebranie",
+                                    "definition": "when people come together to talk",
+                                    "pos": "n",
+                                    "sentenceWithGap": "We have a [gap] with the manager at ten.",
+                                    "firstLetterHint": "m"
+                        },
+                        {
+                                    "word": "cheap",
+                                    "translation": "tani",
+                                    "definition": "not costing a lot of money",
+                                    "pos": "adj",
+                                    "sentenceWithGap": "This car isn't expensive, it's quite [gap].",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "first step",
+                                    "translation": "pierwszy krok",
+                                    "definition": "the first thing you do in a long job",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "Talking about the problem is the [gap] to fixing it.",
+                                    "firstLetterHint": "f"
+                        }
             ]
 };
 
@@ -3160,8 +3310,8 @@ video {
         "teacherWhatsApp": "48797620710",
         "storageKey": "hub_lukasz-b_2026-10",
         "studentKey": "hub_lukasz-b",
-        "stamp": "aktualizacja po lekcji 3, 17.10.2026",
-        "lastLessonPhrase": "lekcji 3",
+        "stamp": "aktualizacja po lekcji 4, 24.10.2026",
+        "lastLessonPhrase": "lekcji 4",
         "lessons": [
                 {
                         "label": "Lekcja 1",
@@ -3186,6 +3336,14 @@ video {
                         "vocabCount": 3,
                         "extraVocabCount": 0,
                         "topic": "Small talk, 3 kroki (szablon tworzenia zdań w odpowiednim czasie), słówka charakterystyczne dla poszczególnych czasów oraz dopełniacz saksoński"
+                },
+                {
+                        "label": "Lekcja 4",
+                        "dateLabel": "23.10.2026",
+                        "categoryKey": "Lekcja 4 (23.10)",
+                        "vocabCount": 15,
+                        "extraVocabCount": 0,
+                        "topic": "Small talk i praca z artykułem „Europe and China Take a First Step on Car Trade” (poziom Beginner A1-A2)"
                 }
         ],
         "grammar": [
@@ -3356,6 +3514,36 @@ video {
                                         "quizzes": []
                                 }
                         ]
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "23.10.2026",
+                        "topic": "Określenia ilości: much, many, a lot of, few / a few, little / a little",
+                        "mistake": "",
+                        "correction": "",
+                        "items": [],
+                        "explanation": "Many i few dajesz z rzeczownikami policzalnymi, much i little z niepoliczalnymi, a lot of pasuje do obu. A few / a little = trochę (wystarczy), few / little = mało (za mało).",
+                        "sections": [],
+                        "links": []
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "23.10.2026",
+                        "topic": "",
+                        "mistake": "",
+                        "correction": "",
+                        "items": [],
+                        "explanation": "",
+                        "sections": [],
+                        "links": [
+                                {
+                                        "label": "Much, many i inne określenia ilości. Policzalne i niepoliczalne rzeczowniki w angielskim | eTutor #5",
+                                        "url": "https://www.youtube.com/watch?v=v_R81sdG6Qw&t=35s",
+                                        "type": "youtube",
+                                        "questions": [],
+                                        "quizzes": []
+                                }
+                        ]
                 }
         ],
         "homework": [],
@@ -3365,6 +3553,15 @@ video {
                         "dateLabel": "2.10.2026",
                         "label": "Scotland has a big problem with drugs (Level 2) | News in Levels",
                         "url": "https://www.newsinlevels.com/products/scotland-has-a-big-problem-with-drugs-level-2/",
+                        "type": "article",
+                        "questions": [],
+                        "quizzes": []
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "23.10.2026",
+                        "label": "Europe and China Take a First Step on Car Trade - poziom Beginner (A1-A2) - poprostuangielskizgrzechem",
+                        "url": "https://poprostuangielskizgrzechem.pl/teksty-na-lekcje/eu-china-hybrid-cars-trade-understanding?poziom=beginner",
                         "type": "article",
                         "questions": [],
                         "quizzes": []
@@ -3471,6 +3668,60 @@ video {
                         "lessonLabel": "Lekcja 2",
                         "word": "department",
                         "translation": "dział",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "course",
+                        "translation": "kurs",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "sign up",
+                        "translation": "zapisać się",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "colour",
+                        "translation": "kolor",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "talk",
+                        "translation": "rozmowa / rozmawiać",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "euros",
+                        "translation": "euro",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "leader",
+                        "translation": "lider",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "European",
+                        "translation": "europejski",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "hybrid",
+                        "translation": "hybrydowy",
+                        "note": ""
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "word": "electricity",
+                        "translation": "prąd, elektryczność",
                         "note": ""
                 }
         ],
@@ -3938,8 +4189,262 @@ video {
                                         ]
                                 }
                         ]
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "23.10.2026",
+                        "title": "1. Much, many, a lot of, few, little",
+                        "instructions": "Choose the correct word.",
+                        "layout": "list",
+                        "columns": [],
+                        "wordBox": [],
+                        "letters": false,
+                        "strict": false,
+                        "items": [
+                                {
+                                        "text": "How [gap] money do you spend on petrol every month?",
+                                        "answers": [
+                                                "much"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "much",
+                                                        "many"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "How [gap] cars did you repair this week?",
+                                        "answers": [
+                                                "many"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "much",
+                                                        "many"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "There isn't [gap] time before the meeting.",
+                                        "answers": [
+                                                "much"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "much",
+                                                        "many"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I don't have [gap] friends at work, only two.",
+                                        "answers": [
+                                                "many"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "much",
+                                                        "many"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "China sells [gap] hybrid cars to Europe.",
+                                        "answers": [
+                                                "a lot of"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "a lot of",
+                                                        "much"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "Europe buys [gap] things from China.",
+                                        "answers": [
+                                                "a lot of"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "much",
+                                                        "a lot of"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "We need [gap] information about the new rules.",
+                                        "answers": [
+                                                "a lot of"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "a lot of",
+                                                        "many"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I have [gap] questions for you. Have you got five minutes?",
+                                        "answers": [
+                                                "a few"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "few",
+                                                        "a few"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "[gap] people know about this deal. It's a secret.",
+                                        "answers": [
+                                                "Few"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "Few",
+                                                        "A few"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "Can I have [gap] milk in my coffee, please?",
+                                        "answers": [
+                                                "a little"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "a few",
+                                                        "a little"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "There's very [gap] petrol in the car. We must stop soon.",
+                                        "answers": [
+                                                "little"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "little",
+                                                        "a little"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I speak [gap] English, so I can talk to tourists.",
+                                        "answers": [
+                                                "a little"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "little",
+                                                        "a little"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "He has [gap] patience. He gets angry very fast.",
+                                        "answers": [
+                                                "little"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "little",
+                                                        "a little"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "We have [gap] spare parts, so I can fix your car today.",
+                                        "answers": [
+                                                "a few"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "few",
+                                                        "a few"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "The company has very [gap] workers now, so everybody works overtime.",
+                                        "answers": [
+                                                "few"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "few",
+                                                        "a few"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "How [gap] electricity does a hybrid car use?",
+                                        "answers": [
+                                                "much"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "many",
+                                                        "much"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "How [gap] euros does this part cost?",
+                                        "answers": [
+                                                "many"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "many",
+                                                        "much"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I don't drink [gap] coffee, only one cup a day.",
+                                        "answers": [
+                                                "much"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "many",
+                                                        "much"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "There aren't [gap] good jobs in my town.",
+                                        "answers": [
+                                                "many"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "many",
+                                                        "much"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I need [gap] advice about my new car.",
+                                        "answers": [
+                                                "a little"
+                                        ],
+                                        "choices": [
+                                                [
+                                                        "a few",
+                                                        "a little"
+                                                ]
+                                        ]
+                                }
+                        ]
                 }
         ],
+        "games": [],
         "distractors": [
                 {
                         "word": "spanner",
@@ -4059,7 +4564,8 @@ video {
         ],
         "priorityVerbs": [
                 "know",
-                "go"
+                "go",
+                "choose"
         ],
         "verbRoundSize": 6,
         "sentencePool": [
@@ -4210,7 +4716,8 @@ video {
                 {
                         "word": "meeting",
                         "lessons": [
-                                "Lekcja 2"
+                                "Lekcja 2",
+                                "Lekcja 4"
                         ]
                 },
                 {
@@ -4290,6 +4797,90 @@ video {
                         "lessons": [
                                 "Lekcja 3"
                         ]
+                },
+                {
+                        "word": "choose",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "within limits",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "be willing to",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "chief",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "announce",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "understanding",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "ladder",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "compete",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "trade",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "deal",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "sell",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "agree",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "cheap",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "first step",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
                 }
         ],
         "sentenceCount": 5,
@@ -4308,6 +4899,11 @@ video {
                         "lessonLabel": "Lekcja 3",
                         "dateLabel": "16.10.2026",
                         "text": "W zakładce „Gramatyka” masz dwa filmiki wideo oraz dwa testy. Obejrzyj sobie filmiki i zrób testy. Następnie w zakładce „Ćwiczenia” zrób sobie zadania. Standardowo ćwicz słówka, korzystając z fiszek i testów, oraz pisz zdania i wysyłaj mi je do sprawdzenia."
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "23.10.2026",
+                        "text": "Dokończ artykuł, posłuchaj go i zwracaj uwagę na zagadnienia gramatyczne w tekście. Obejrzyj filmik w zakładce „Gramatyka” i zrób sobie swoje notatki. Następnie zrób zadania w zakładce „Ćwiczenia”."
                 }
         ]
 };
@@ -5746,6 +6342,7 @@ video {
         var PRONUNCIATION = HUB.pronunciation || [];
         var WRITING = HUB.writingSpeaking || [];
         var EXERCISES = HUB.exercises || [];
+        var GAMES = HUB.games || [];
         // Tryb pliku. "month" to hub miesieczny ucznia (slownictwo z jego lekcji,
         // gramatyka, wymowa, zdania, czasowniki). "unit" to strona jednego dzialu
         // z podrecznika: te same fiszki i ten sam test, tylko karmione slownictwem
@@ -5930,11 +6527,12 @@ video {
             pronunciation: 'hub-pronunciation-view',
             writing:       'hub-writing-view',
             exercises:     'hub-exercises-view',
-            sentences:     'hub-sentences-view'
+            sentences:     'hub-sentences-view',
+            games:         'hub-games-view'
         };
         var ALL_VIEW_IDS = [
             'hub-home-view', 'flashcards-view', 'config-view',
-            'hub-grammar-view', 'hub-media-view', 'hub-pronunciation-view', 'hub-writing-view', 'hub-exercises-view', 'hub-sentences-view', 'hub-verbs-view',
+            'hub-grammar-view', 'hub-media-view', 'hub-pronunciation-view', 'hub-writing-view', 'hub-exercises-view', 'hub-sentences-view', 'hub-verbs-view', 'hub-games-view',
             'path-selection-view', 'student-start-view', 'quiz-view'
         ];
 
@@ -6044,6 +6642,7 @@ video {
                 { key: 'pronunciation', icon: '🔊', label: 'Wymowa',    sub: count(PRONUNCIATION.length, 'słówko', 'słówka', 'słówek') + ' do posłuchania', count: PRONUNCIATION.length },
                 { key: 'writing',       icon: '📖', label: 'Teksty', sub: count(WRITING.length, 'tekst', 'teksty', 'tekstów') + ' do przeczytania/napisania', count: WRITING.length },
                 { key: 'exercises',     icon: '📋', label: 'Ćwiczenia', sub: count(EXERCISES.length, 'ćwiczenie', 'ćwiczenia', 'ćwiczeń') + ' z lukami', count: EXERCISES.length },
+                { key: 'games',         icon: '🎮', label: 'Gry', sub: count(GAMES.length, 'gra', 'gry', 'gier') + ' do zagrania', count: GAMES.length },
                 { key: 'sentences',     icon: '✍️', label: 'Ułóż zdania', sub: count(SENT_COUNT, 'słówko', 'słówka', 'słówek') + ' z puli ' + SENT_POOL.length + ', losowo', count: SENT_POOL.length }
             ];
             // Kafelek czasownikow inaczej wyszedlby na stronie Unitu aktywny, bo
@@ -8991,6 +9590,53 @@ video {
         }
 
         // ==========================================
+        // Gry: osadzony HTML otwierany w pelnoekranowej ramce
+        // ==========================================
+        var gameUrl = null;
+        function renderGames() {
+            var box = el('hub-games-list');
+            if (!box) return;
+            if (!GAMES.length) {
+                box.innerHTML = '<p class="hub-tagline">Na razie nie ma tu gier.</p>';
+            } else {
+                box.innerHTML = '<div class="hub-links">' + GAMES.map(function (g, i) {
+                    return '<button type="button" class="hub-link-tile" data-hub-game="' + i + '" style="cursor:pointer; text-align:left; width:100%">' +
+                        '<span>🎮 <strong>' + escapeHtml(g.title) + '</strong>' +
+                        (g.description ? '<br><span class="hub-tile-sub">' + escapeHtml(g.description) + '</span>' : '') +
+                        '</span></button>';
+                }).join('') + '</div>';
+            }
+            // Przycisk nawigacji znika, gdy nie ma gier - pusta zakladka nic nie daje.
+            var navBtn = document.querySelector('.hub-nav-btn[data-hub-nav="games"]');
+            hideIf(!GAMES.length, navBtn);
+            box.addEventListener('click', function (e) {
+                var b = e.target.closest ? e.target.closest('[data-hub-game]') : null;
+                if (b) openGame(parseInt(b.getAttribute('data-hub-game'), 10));
+            });
+            var close = el('hub-game-close');
+            if (close) close.addEventListener('click', closeGame);
+        }
+        function openGame(i) {
+            var g = GAMES[i];
+            if (!g) return;
+            stopSpeaking();
+            var bin = atob(g.html64);
+            var bytes = new Uint8Array(bin.length);
+            for (var k = 0; k < bin.length; k++) bytes[k] = bin.charCodeAt(k);
+            if (gameUrl) URL.revokeObjectURL(gameUrl);
+            gameUrl = URL.createObjectURL(new Blob([bytes], { type: 'text/html;charset=utf-8' }));
+            el('hub-game-frame').src = gameUrl;
+            el('hub-game-overlay').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeGame() {
+            el('hub-game-overlay').style.display = 'none';
+            el('hub-game-frame').src = 'about:blank';
+            if (gameUrl) { URL.revokeObjectURL(gameUrl); gameUrl = null; }
+            document.body.style.overflow = '';
+        }
+
+        // ==========================================
         // Start
         // ==========================================
         function hubInit() {
@@ -9008,6 +9654,7 @@ video {
                 renderPronunciation();
                 renderWriting();
                 renderExercises();
+                renderGames();
 
                 loadSentences();
                 renderSentLessonChips();
